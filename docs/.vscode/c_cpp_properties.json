@@ -1,0 +1,41 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/jaramy/ser_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/jaramy/ser_ws/src/navigation/amcl/include/**",
+        "/home/jaramy/ser_ws/src/navigation/base_local_planner/include/**",
+        "/home/jaramy/ser_ws/src/navigation/carrot_planner/include/**",
+        "/home/jaramy/ser_ws/src/navigation/clear_costmap_recovery/include/**",
+        "/home/jaramy/ser_ws/src/navigation/costmap_2d/include/**",
+        "/home/jaramy/ser_ws/src/navigation/dwa_local_planner/include/**",
+        "/home/jaramy/ser_ws/src/bobo_robot/fiducials/fiducial_slam/include/**",
+        "/home/jaramy/ser_ws/src/navigation/global_planner/include/**",
+        "/home/jaramy/ser_ws/src/navigation/map_server/include/**",
+        "/home/jaramy/ser_ws/src/navigation/move_base/include/**",
+        "/home/jaramy/ser_ws/src/navigation/move_slow_and_clear/include/**",
+        "/home/jaramy/ser_ws/src/navigation/nav_core/include/**",
+        "/home/jaramy/ser_ws/src/navigation/navfn/include/**",
+        "/home/jaramy/ser_ws/src/bobo_robot/realsense-ros/realsense2_camera/include/**",
+        "/home/jaramy/ser_ws/src/bobo_robot/realsense_gazebo_plugin/include/**",
+        "/home/jaramy/ser_ws/src/navigation/rotate_recovery/include/**",
+        "/home/jaramy/ser_ws/src/bobo_robot/slam_toolbox/slam_toolbox/include/**",
+        "/home/jaramy/ser_ws/src/bobo_robot/usb_cam/include/**",
+        "/home/jaramy/ser_ws/src/vision_msgs/include/**",
+        "/home/jaramy/ser_ws/src/navigation/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

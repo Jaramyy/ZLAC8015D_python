@@ -1,3 +1,6 @@
+# ROS wrapper package for control ZLAC8015 BLDC Motor
+If use this package on ros, You can setup this package via ``catkin build``
+
 # A Python package of ZLAC8015D AC Servo Driver
 
 This is a simple python package by using pymodbus to be able to access registers of ZLAC8015D.

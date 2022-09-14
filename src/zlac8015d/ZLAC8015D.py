@@ -1,17 +1,14 @@
-
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 import numpy as np
+import rospy
 
-class Controller:
+class ZLAC8015DController:
 
 	def __init__(self, port="/dev/ttyUSB0"):
 
 		self._port = port
-
 		self.client = ModbusClient(method='rtu', port=self._port, baudrate=115200, timeout=1)
-
 		self.client.connect()
-
 		self.ID = 1
 
 		######################
@@ -94,9 +91,9 @@ class Controller:
 		## Odometry ##
 		##############
 		## 8 inches wheel
-		self.travel_in_one_rev = 0.655
-		self.cpr = 16385
-		self.R_Wheel = 0.105 #meter
+		self.travel_in_one_rev = 0.33615041393 #0.33615041393
+		self.cpr = 4096 #16385
+		self.R_Wheel = 0.107 #meter
 
 	## Some time if read immediatly after write, it would show ModbusIOException when get data from registers
 	def modbus_fail_read_handler(self, ADDR, WORD):
@@ -326,5 +323,5 @@ class Controller:
 		r_pulse = np.int32(((r_pul_hi & 0xFFFF) << 16) | (r_pul_lo & 0xFFFF))
 		l_travelled = (float(l_pulse)/self.cpr)*self.travel_in_one_rev  # unit in meter
 		r_travelled = (float(r_pulse)/self.cpr)*self.travel_in_one_rev  # unit in meter
-
+		
 		return l_travelled, r_travelled
